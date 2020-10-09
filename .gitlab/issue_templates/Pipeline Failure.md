@@ -23,7 +23,9 @@
 (If you can, link to the line of code that might be responsible for the problem)
 
 
+## Definition of Done
+- [ ] Pipeline failure has been resolved
 
 
-/label ~pipeline ~bug
+/label ~Pipeline
 /cc @ironbank-notifications/pipelines
