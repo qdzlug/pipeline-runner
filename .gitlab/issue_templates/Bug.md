@@ -29,7 +29,9 @@ logs, and code as it's very hard to read otherwise.)
 (If you can, link to the line of code that might be responsible for the problem)
 
 
+## Defintion of Done
+- [ ] Bug has been identified and corrected within the container
 
 
-/label ~bug
+/label ~Bug
 /cc @ironbank-notifications/bug

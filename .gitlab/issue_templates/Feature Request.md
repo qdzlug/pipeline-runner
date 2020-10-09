@@ -24,6 +24,9 @@
 (List of links or references that support this feature)
 
 
+## Definition of Done
+- [ ] Feature has been implemented
 
-/label ~feature
+
+/label ~Feature
 /cc @ironbank-notifications/feature
