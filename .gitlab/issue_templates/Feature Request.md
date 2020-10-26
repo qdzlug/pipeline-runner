@@ -29,4 +29,3 @@
 
 
 /label ~Feature
-/cc @ironbank-notifications/feature

@@ -17,4 +17,3 @@ Approval Process:
 
 
 /label ~"Container::New Findings"
-/cc @ironbank-notifications/security

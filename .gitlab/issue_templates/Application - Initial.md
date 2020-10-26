@@ -29,4 +29,3 @@ Approval Process (container hardening team processes):
 
 
 /label ~"Container::Initial"
-/cc @ironbank-notifications/cht
