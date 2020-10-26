@@ -32,4 +32,3 @@ Approval Process:
 
 
 /label ~"Container::Update"
-/cc @ironbank-notifications/updates
