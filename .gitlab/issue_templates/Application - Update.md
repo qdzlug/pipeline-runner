@@ -19,6 +19,9 @@ Hardening:
 - [ ] Container version has been updated in greylist file
 - [ ] Branch has been merged into `development`
 
+No new findings:
+- [ ] There are no new findings in this update. Skip the Justifications and Approval Process steps and apply the label ~"Approval".
+
 Justifications:
 - [ ] All findings have been justified per the above documentation
 - [ ] Justifications have been provided to the container hardening team
