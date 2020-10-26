@@ -28,4 +28,3 @@
 
 
 /label ~Pipeline
-/cc @ironbank-notifications/pipelines
