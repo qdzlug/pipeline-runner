@@ -34,4 +34,3 @@ logs, and code as it's very hard to read otherwise.)
 
 
 /label ~Bug
-/cc @ironbank-notifications/bug

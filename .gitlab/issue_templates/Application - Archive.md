@@ -18,4 +18,3 @@ Requesting this application be archived due to one of the following reasons:
 
 
 /label ~"Container::Archive"
-/cc @ironbank-notifications/archive
