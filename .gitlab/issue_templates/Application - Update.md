@@ -42,7 +42,7 @@ No new findings:
 Justifications:
 - [ ] All findings have been justified per the above documentation
 - [ ] Justifications have been provided to the container hardening team
-- [ ] Skip the Justifications and Approval Process steps and apply the label `Approval`
+- [ ] Apply the label `Approval` and wait for container hardening feedback
 
 Note: The justifications must be provided in a timely fashion. Failure to do so could result in new findings being identified which may start this process over.
 
