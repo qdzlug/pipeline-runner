@@ -9,7 +9,7 @@ The access level should be:
 - [ ] Developer access
 - [ ] Remove access
 
-Dose the member need access to the VAT? (https://vat.dso.mil/vat)
+Does the member need access to the VAT? (https://vat.dso.mil/vat)
 - [ ] Yes
 - [ ] No
 
