@@ -2,18 +2,22 @@
 
 The following individuals are requesting access to this project (one per line):
 (Tag all individuals here)
+
 - Tag here
 
 The access level should be:
 - [ ] Developer access
 - [ ] Remove access
 
+Dose the member need access to the VAT? (https://vat.dso.mil/vat)
+- [ ] Yes
+- [ ] No
 
-## Definition of Done
-- [ ] All accounts have been provided the necessary accesses
+## Iron Bank Tasks
+- [ ] All accounts have been provided the necessary accesses to the projects
+- [ ] All accounts have been provided the necessary accesses to the VAT (optional)
 
 
-
-
-
-/label ~"Access Request" ~"To Do" ~"Owner::Ironbank"
+/label ~"Access Request::Repo" ~"CSO::To Do" ~"Owner::Ironbank"
+/cc @ironbank-notifications/onboarding
+/assign @ironbank-notifications/onboarding
