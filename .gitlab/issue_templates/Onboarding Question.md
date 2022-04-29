@@ -8,5 +8,6 @@
 
 
 
-/label ~"Question::Onboarding" ~"To Do"
+/label ~"Question::Onboarding" ~"CSO::To Do"
 /cc @ironbank-notifications/onboarding
+/assign @ironbank-notifications/onboarding
