@@ -11,7 +11,7 @@ Contributor:
 - [ ] Ensure container builds successfully in the Iron Bank pipeline
 - [ ] Provide justifications for findings in the [VAT](https://vat.dso.mil) ([docs](https://repo1.dso.mil/dsop/dccscr/-/blob/master/pre-approval/vat.md))
 - [ ] Open a Merge Request from your branch to `development`
-- [ ] Apply the ~"Hardening::Approval" label to this issue and wait for feedback
+- [ ] Apply the ~"Hardening::Review" label to this issue and wait for feedback
 
 Iron Bank:
 - [ ] Merge contributor branch to `development`
