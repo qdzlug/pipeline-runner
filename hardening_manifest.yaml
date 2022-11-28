@@ -1,0 +1,40 @@
+---
+apiVersion: v1
+
+# The repository name in registry1, excluding /ironbank/
+name: "opensource/pipeline-runner"
+
+# List of tags to push for the repository in registry1
+# The most specific version should be the first tag and will be shown
+# on ironbank.dsop.io
+tags:
+  - "v0.9.0"
+  - "latest"
+
+# Build args passed to Dockerfile ARGs
+args:
+  BASE_IMAGE: "ironbank-pipelines/pipeline-runner"
+  BASE_TAG: "v0.9.0"
+
+# Docker image labels
+labels:
+  org.opencontainers.image.title: "pipeline-runner"
+  org.opencontainers.image.description: "Built on IB's pipeline-runner with added libs"
+  org.opencontainers.image.licenses: "Apache"
+  org.opencontainers.image.url: "https://repo1.dso.mil/dsop/opensource/pipeline-runner/pipeline-runner"
+  org.opencontainers.image.vendor: "Iron Bank"
+  org.opencontainers.image.version: "v0.9.0"
+  mil.dso.ironbank.image.keywords: "ib-pipeline,pipeline,ironbank,rootless-podman"
+  mil.dso.ironbank.image.type: "opensource"
+  mil.dso.ironbank.product.name: "ib-pipeline"
+
+# List of project maintainers
+maintainers:
+- name: "Kyle Rilling"
+  username: "krilling"
+  email: "kylerilling@seed-innovations.com"
+  cht_member: false
+- name: "Joram Stephenson"
+  username: "joram.stephenson"
+  email: "stephenson_joram@bah.com"
+  cht_member: false
