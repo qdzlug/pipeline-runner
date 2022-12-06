@@ -16,7 +16,7 @@ tags:
 #   BASE_IMAGE: "ironbank-pipelines/pipeline-runner"
 #   BASE_TAG: "v0.9.0"
 
-Build args passed to Dockerfile ARGs
+#Build args passed to Dockerfile ARGs
 args:
   BASE_IMAGE: "opensource/python/python39"
   BASE_TAG: "v3.9.10"
