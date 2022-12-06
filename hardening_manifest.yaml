@@ -21,7 +21,7 @@ args:
   BASE_IMAGE: "opensource/python/python39"
   BASE_TAG: "v3.9.10"
 
-Docker image labels
+# Docker image labels
 labels:
   org.opencontainers.image.title: "pipeline-runner"
   org.opencontainers.image.description: "Built on IB's pipeline-runner with added libs"
