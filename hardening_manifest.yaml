@@ -28,6 +28,28 @@ labels:
   mil.dso.ironbank.image.type: "opensource"
   mil.dso.ironbank.product.name: "ib-pipeline"
 
+resources:
+  - url: "https://rpmfind.net/linux/centos/8-stream/AppStream/x86_64/os/Packages/openscap-utils-1.3.5-2.el8.x86_64.rpm"
+    filename: "openscap-utils-1.3.5-2.el8.x86_64.rpm"
+    validation:
+      type: "sha256"
+      value: "a91fadda6abf97b6691ff0ca253d7b1d937cc1f59e9d83d802909fb6c0959dd8"
+  - url: "https://rpmfind.net/linux/centos/8-stream/AppStream/x86_64/os/Packages/openscap-1.3.5-2.el8.x86_64.rpm"
+    filename: "openscap-1.3.5-2.el8.x86_64.rpm"
+    validation:
+      type: "sha256"
+      value: "550d05915e729f841219a292edd295a1e31183570d8f8d4032fd5ca6de428fdc"
+  - url: "https://rpmfind.net/linux/centos/8-stream/AppStream/x86_64/os/Packages/openscap-scanner-1.3.5-2.el8.x86_64.rpm"
+    filename: "openscap-scanner-1.3.5-2.el8.x86_64.rpm"
+    validation:
+      type: "sha256"
+      value: "b95149efdacaeabee6298722af4d1eb3e0c7f99a41f4e0fabce0a0cc69adfe8f"
+  - url: "https://rpmfind.net/linux/centos/8-stream/AppStream/ppc64le/os/Packages/rpmdevtools-8.10-8.el8.noarch.rpm"
+    filename: "rpmdevtools-8.10-8.el8.noarch.rpm"
+    validation:
+      type: "sha256"
+      value: "f6c9f11f58d8a0daffb755590ad239cdf1bf5fa69bfde752bbd3f1c89e325220"
+
 # List of project maintainers
 maintainers:
 - name: "Kyle Rilling"
