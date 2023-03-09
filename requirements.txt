@@ -11,7 +11,8 @@ gitdb
 idna
 jdcal
 jmespath
-minepy
+setuptools
+# minepy
 mysql_connector_python
 numpy
 openpyxl
@@ -29,7 +30,6 @@ soupsieve
 urllib3
 pip
 wheel
-setuptools
 notary
 attrs
 importlib_metadata

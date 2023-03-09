@@ -1,6 +1,6 @@
 ARG BASE_REGISTRY=registry1.dso.mil
 ARG BASE_IMAGE=ironbank/ironbank-pipelines/pipeline-runner
-ARG BASE_TAG=v0.9.0
+ARG BASE_TAG=v0.9.6
 
 FROM ${BASE_REGISTRY}/${BASE_IMAGE}:${BASE_TAG}
 
@@ -10,7 +10,8 @@ ENV PATH /usr/local/bin:$PATH
 
 COPY signatures/centos-gpg-key /etc/pki/rpm-gpg/RPM-GPG-KEY-centosofficial
 
-RUN dnf install -y podman unzip && \
+RUN dnf update -y --nodocs && \
+    dnf install -y --nodocs podman unzip && \
     dnf clean all && \
     rm -rf /var/cache/dnf
 
@@ -21,11 +22,11 @@ COPY *.rpm /opt/dnfmodules/
 ENV _BUILDAH_STARTED_IN_USERNS="" BUILDAH_ISOLATION=chroot PATH="${PATH}:/root/.local/bin"
 
 RUN rpm --import /etc/pki/rpm-gpg/RPM-GPG-KEY-centosofficial && \
-    dnf upgrade -y && \
-    dnf install -y podman buildah skopeo && \
+    dnf upgrade -y --nodocs && \
+    dnf install -y --nodocs podman buildah skopeo && \
     dnf install -y /opt/dnfmodules/*.rpm --setopt=tsflags=nodocs && \
-    dnf install -y make gcc openssl-devel bzip2-devel \
-        libffi-devel bc gettext git lsof rsync unzip \
+    dnf install -y --nodocs make automake gcc openssl-devel bzip2-devel \
+        python3-devel libffi-devel bc gettext git lsof rsync unzip \
         zip bzip2 jq gcc-c++ \
         --setopt=tsflags=nodocs && \
     # mv /usr/local/bin/notary-Linux-amd64 /usr/local/bin/notary && \
@@ -36,7 +37,7 @@ RUN rpm --import /etc/pki/rpm-gpg/RPM-GPG-KEY-centosofficial && \
     dnf clean all && \
     rm -rf /var/cache/dnf
 
-RUN python3 -m pip install --upgrade pip && \
+RUN pip install --upgrade pip && \
     python3 -m pip install -r /local/requirements.txt
 
 RUN dnf -y remove gcc make openssl-devel bzip2-devel libffi-devel && \
@@ -49,4 +50,4 @@ RUN dnf -y remove gcc make openssl-devel bzip2-devel libffi-devel && \
 RUN rm -f /usr/share/doc/perl-IO-Socket-SSL/example/simulate_proxy.pl && \
         find /usr/share/doc -type f \( -iname \*.pem -o -iname \*.enc \) -exec rm -f {} \;
 
-HEALTHCHECK none
+HEALTHCHECK NONE
