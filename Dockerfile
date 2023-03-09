@@ -50,4 +50,3 @@ RUN dnf -y remove gcc make openssl-devel bzip2-devel libffi-devel && \
 RUN rm -f /usr/share/doc/perl-IO-Socket-SSL/example/simulate_proxy.pl && \
         find /usr/share/doc -type f \( -iname \*.pem -o -iname \*.enc \) -exec rm -f {} \;
 
-HEALTHCHECK NONE
