@@ -8,13 +8,13 @@ name: "opensource/pipeline-runner"
 # The most specific version should be the first tag and will be shown
 # on ironbank.dsop.io
 tags:
-  - "v0.9.0"
+  - "v0.9.6"
   - "latest"
 
 # Build args passed to Dockerfile ARGs
 args:
   BASE_IMAGE: "ironbank-pipelines/pipeline-runner"
-  BASE_TAG: "v0.9.0"
+  BASE_TAG: "v0.9.6"
 
 # Docker image labels
 labels:
@@ -23,7 +23,7 @@ labels:
   org.opencontainers.image.licenses: "Apache"
   org.opencontainers.image.url: "https://repo1.dso.mil/dsop/opensource/pipeline-runner/pipeline-runner"
   org.opencontainers.image.vendor: "Iron Bank"
-  org.opencontainers.image.version: "v0.9.0"
+  org.opencontainers.image.version: "v0.9.6"
   mil.dso.ironbank.image.keywords: "ib-pipeline,pipeline,ironbank,rootless-podman"
   mil.dso.ironbank.image.type: "opensource"
   mil.dso.ironbank.product.name: "ib-pipeline"
@@ -59,4 +59,8 @@ maintainers:
 - name: "Joram Stephenson"
   username: "joram.stephenson"
   email: "stephenson_joram@bah.com"
+  cht_member: false
+- name: "Achsah Abraham"
+  username: "achsahabraham"
+  email: "abraham_achsah@bah.com"
   cht_member: false

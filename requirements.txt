@@ -11,7 +11,7 @@ gitdb
 idna
 jdcal
 jmespath
-minepy
+setuptools
 mysql_connector_python
 numpy
 openpyxl
@@ -29,7 +29,6 @@ soupsieve
 urllib3
 pip
 wheel
-setuptools
 notary
 attrs
 importlib_metadata
@@ -47,3 +46,7 @@ pytest
 pytest_mock
 tomli
 charset_normalizer
+# minepy
+jinja2
+python-gitlab 
+poetry-core
