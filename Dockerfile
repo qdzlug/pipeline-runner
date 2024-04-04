@@ -1,6 +1,6 @@
 ARG BASE_REGISTRY=registry1.dso.mil
 ARG BASE_IMAGE=ironbank/ironbank-pipelines/pipeline-runner
-ARG BASE_TAG=v0.9.6
+ARG BASE_TAG=0.12.0
 
 FROM ${BASE_REGISTRY}/${BASE_IMAGE}:${BASE_TAG}
 
@@ -10,14 +10,8 @@ ENV PATH /usr/local/bin:$PATH
 
 COPY signatures/centos-gpg-key /etc/pki/rpm-gpg/RPM-GPG-KEY-centosofficial
 
-RUN dnf update -y --nodocs && \
-    dnf install -y --nodocs podman unzip && \
-    dnf clean all && \
-    rm -rf /var/cache/dnf
-
 COPY requirements.txt /local/requirements.txt
 COPY *.rpm /opt/dnfmodules/
-# COPY notary-Linux-amd64 /usr/local/bin/
 
 ENV _BUILDAH_STARTED_IN_USERNS="" BUILDAH_ISOLATION=chroot PATH="${PATH}:/root/.local/bin"
 
@@ -27,15 +21,11 @@ RUN rpm --import /etc/pki/rpm-gpg/RPM-GPG-KEY-centosofficial && \
     dnf install -y /opt/dnfmodules/*.rpm --setopt=tsflags=nodocs && \
     dnf install -y --nodocs make automake gcc openssl-devel bzip2-devel \
         python3-devel libffi-devel bc gettext git lsof rsync unzip \
-        zip bzip2 jq gcc-c++ \
+        zip bzip2 jq gcc-c++  \
         --setopt=tsflags=nodocs && \
-    # mv /usr/local/bin/notary-Linux-amd64 /usr/local/bin/notary && \
-    # chmod 755 /usr/local/bin/notary && \
     rm /etc/pki/rpm-gpg/RPM-GPG-KEY-centosofficial && \
     rm -rf /opt/dnfmodules && \
-    chmod -s /usr/libexec/openssh/ssh-keysign && \
-    dnf clean all && \
-    rm -rf /var/cache/dnf
+    chmod -s /usr/libexec/openssh/ssh-keysign
 
 RUN pip install --upgrade pip && \
     python3 -m pip install -r /local/requirements.txt

@@ -8,13 +8,12 @@ name: "opensource/pipeline-runner"
 # The most specific version should be the first tag and will be shown
 # on ironbank.dsop.io
 tags:
-  - "v0.9.6"
-  - "latest"
+  - "0.12.0"
 
 # Build args passed to Dockerfile ARGs
 args:
   BASE_IMAGE: "ironbank-pipelines/pipeline-runner"
-  BASE_TAG: "v0.9.6"
+  BASE_TAG: "0.12.0"
 
 # Docker image labels
 labels:
@@ -23,32 +22,32 @@ labels:
   org.opencontainers.image.licenses: "Apache"
   org.opencontainers.image.url: "https://repo1.dso.mil/dsop/opensource/pipeline-runner/pipeline-runner"
   org.opencontainers.image.vendor: "Iron Bank"
-  org.opencontainers.image.version: "v0.9.6"
+  org.opencontainers.image.version: "0.12.0"
   mil.dso.ironbank.image.keywords: "ib-pipeline,pipeline,ironbank,rootless-podman"
   mil.dso.ironbank.image.type: "opensource"
   mil.dso.ironbank.product.name: "ib-pipeline"
 
 resources:
-  - url: "https://rpmfind.net/linux/centos/8-stream/AppStream/x86_64/os/Packages/openscap-utils-1.3.5-2.el8.x86_64.rpm"
-    filename: "openscap-utils-1.3.5-2.el8.x86_64.rpm"
+  - url: "https://mirror.stream.centos.org/9-stream/AppStream/x86_64/os/Packages/openscap-utils-1.3.8-1.el9.x86_64.rpm"
+    filename: "openscap-utils-1.3.8-1.el9.x86_64.rpm"
     validation:
       type: "sha256"
-      value: "a91fadda6abf97b6691ff0ca253d7b1d937cc1f59e9d83d802909fb6c0959dd8"
-  - url: "https://rpmfind.net/linux/centos/8-stream/AppStream/x86_64/os/Packages/openscap-1.3.5-2.el8.x86_64.rpm"
-    filename: "openscap-1.3.5-2.el8.x86_64.rpm"
+      value: "b9ace15fa5c70bf1c488f007c459ed2f06613573fa3a7ddccc390e4ca4dacfda"
+  - url: "https://mirror.stream.centos.org/9-stream/AppStream/x86_64/os/Packages/openscap-1.3.8-1.el9.x86_64.rpm"
+    filename: "openscap-1.3.8-1.el9.x86_64.rpm"
     validation:
       type: "sha256"
-      value: "550d05915e729f841219a292edd295a1e31183570d8f8d4032fd5ca6de428fdc"
-  - url: "https://rpmfind.net/linux/centos/8-stream/AppStream/x86_64/os/Packages/openscap-scanner-1.3.5-2.el8.x86_64.rpm"
-    filename: "openscap-scanner-1.3.5-2.el8.x86_64.rpm"
+      value: "8cb8892cb6b08f14de83f9811b5db7fdcf984f6c149cee863cb1f01b4b2825b8"
+  - url: "https://mirror.stream.centos.org/9-stream/AppStream/x86_64/os/Packages/openscap-scanner-1.3.8-1.el9.x86_64.rpm"
+    filename: "openscap-scanner-1.3.8-1.el9.x86_64.rpm"
     validation:
       type: "sha256"
-      value: "b95149efdacaeabee6298722af4d1eb3e0c7f99a41f4e0fabce0a0cc69adfe8f"
-  - url: "https://rpmfind.net/linux/centos/8-stream/AppStream/ppc64le/os/Packages/rpmdevtools-8.10-8.el8.noarch.rpm"
-    filename: "rpmdevtools-8.10-8.el8.noarch.rpm"
+      value: "a223e8a51e271c9c9b12111ce297f509b904f0a80b1109fb40e905c41b1845f6"
+  - url: "https://mirror.stream.centos.org/9-stream/AppStream/x86_64/os/Packages/rpmdevtools-9.3-7.el9.noarch.rpm"
+    filename: "rpmdevtools-9.3-7.el9.noarch.rpm"
     validation:
       type: "sha256"
-      value: "f6c9f11f58d8a0daffb755590ad239cdf1bf5fa69bfde752bbd3f1c89e325220"
+      value: "5ed6be995649a9c7c6e0b1bfcd24dba991a57adf3e770db45609281b341f0ff2"
 
 # List of project maintainers
 maintainers:
